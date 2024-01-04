@@ -6,9 +6,11 @@ namespace Matrix
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose an operation:");
-            Console.WriteLine("1. Display random Matrix A and B, then Sum");
-            Console.WriteLine("2. OtherOperation");
+            Console.WriteLine("By chose operation to proceed:");
+            Console.WriteLine("1. Sum      //For the sum you will need to insert two matrices");
+            Console.WriteLine("2. Multiply");
+            Console.WriteLine("3. Determinant");
+            Console.WriteLine("4. Gaussian Elimination");
 
             string choice = Console.ReadLine();
 
@@ -20,6 +22,13 @@ namespace Matrix
                     sumMatrix.Sum();
                     break;
                 case "2":
+                    sumMatrix.Multiply();
+                    break;
+                case "3":
+                    sumMatrix.Determinant();
+                    break;
+                case "4":
+                    sumMatrix.GaussianElimination();
                     break;
                 default:
                     Console.WriteLine("Invalid choice");
